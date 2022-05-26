@@ -11,12 +11,12 @@ const formSchema = yup.object().shape({
         .required("Please Enter A Last Name"),
     email: yup
         .string()
-        .email()
-        .required("Please Enter A Valid Email"),
+        .email("Please Enter A Valid Email")
+        .required(),
     password: yup
         .string()
         .trim()
-        .required("Please Create A Passwrod"),
+        .required("Please Create A Password"),
     tos: yup.boolean()
 });
 
